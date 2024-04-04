@@ -16,7 +16,7 @@ void loop()
   sensor = analogRead(A2);
   smoke = analogRead(A0);
   
-  if(sensor > threshold){
+  if(sensor < threshold){
     if(smoke >= 250){
       lcd.print("Too much smoke");
       delay(1000);
